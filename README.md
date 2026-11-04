@@ -1,7 +1,9 @@
-# Waleef — QMIC product-family design update (V22)
+Waleef Website V24 — Mobile hero vertical alignment
 
-Standalone static HTML/CSS/JS website. Open `index.html` in a browser.
+Changes from V23:
+- Centered front/angled/side images in the available mobile visual region, accounting for the header above and headlines below.
+- Adjusted the original sleeping robot image to the same visual centerline.
+- Kept headlines in a consistent lower reading zone and preserved their left alignment.
+- Preserved scroll-controlled image transitions, desktop styling, approved text, and other sections.
 
-This iteration aligns typography, spacing, header, pill CTA styling, light surfaces, and controls with the published Masar landing page. Waleef uses the official wordmark red (#E41D26) rather than Masar maroon. Interface icons use official Font Awesome Free SVG artwork embedded inline, so the static page works offline. Icon artwork is from Font Awesome Free (CC BY 4.0). No font files are distributed.
-
-Original scroll-driven scenes and source article wording from V21 remain in place. Real Waleef images are bundled locally. Added responsive header navigation and normalized decorative treatments.
+Open index.html directly in your browser. No server required.
