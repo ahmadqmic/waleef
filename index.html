@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#050a0e"><meta name="description" content="Waleef — conversational AI and remote human presence in the vehicle.">
+<title>Waleef — Embodied Intelligence | QMIC</title>
+<link rel="preload" as="image" href="assets/v5-hero.png"><link rel="preload" as="image" href="assets/front.png">
+<link rel="icon" type="image/svg+xml" href="assets/waleef.svg">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="header" id="site-header">
+  <a class="brand" href="#home" aria-label="Waleef homepage"><img src="assets/waleef.svg" alt="Waleef"></a>
+  <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+    <a href="#introduction">Overview</a><a href="#ai-companion">AI companion</a><a href="#remote-presence">Remote presence</a><a href="#adaptable-robotics">Robotics</a>
+  </nav>
+  <div class="header-tools"><a class="contact" href="mailto:business@qmic.com">Contact QMIC <svg class="fa-icon " aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc. --><path d="M320 0c-17.7 0-32 14.3-32 32s14.3 32 32 32l82.7 0L201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L448 109.3l0 82.7c0 17.7 14.3 32 32 32s32-14.3 32-32l0-160c0-17.7-14.3-32-32-32L320 0zM80 32C35.8 32 0 67.8 0 112L0 432c0 44.2 35.8 80 80 80l320 0c44.2 0 80-35.8 80-80l0-112c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 112c0 8.8-7.2 16-16 16L80 448c-8.8 0-16-7.2-16-16l0-320c0-8.8 7.2-16 16-16l112 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L80 32z"/></svg></a><button class="nav-toggle" id="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="site-nav"><svg class="fa-icon fa-menu-open" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc. --><path d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"/></svg><svg class="fa-icon fa-menu-close" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc. --><path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/></svg></button></div>
+</header>
+<main id="home">
+<section class="hero-track" id="hero-track" aria-label="Waleef cinematic sleeping and waking hero">
+  <div class="hero-stage" id="hero-stage">
+    <div class="ambient" aria-hidden="true"></div>
+    <!-- Actual V5 arm image: same silhouette, angle, and right-hand composition as the agreed first frame -->
+    <div class="robot-layer robot-v5" id="robot-v5"><img src="assets/v5-hero.png" alt="" draggable="false"></div>
+    <div class="robot-layer robot-front" id="robot-front"><img src="assets/front.png" alt="" draggable="false"></div>
+    <div class="robot-layer robot-angle" id="robot-angle"><img src="assets/angle.png" alt="" draggable="false"></div>
+    <div class="robot-layer robot-side" id="robot-side"><img src="assets/side.png" alt="" draggable="false"></div>
+    <div class="dormant-veil" id="dormant-veil" aria-hidden="true"></div><div class="shade" aria-hidden="true"></div><div class="camera-transition" id="camera-transition" aria-hidden="true"></div><div class="wake-light" id="wake-light" aria-hidden="true"></div>
+    <div class="voice-rings" id="voice-rings" aria-hidden="true"><i></i><i></i><i></i></div>
+    <div class="frame-copy sleep-copy" id="sleep-copy" aria-hidden="true"><span class="kicker">00 / STANDBY</span><h1>something<br>is <em>sleeping.</em></h1><p>A quiet presence, waiting to be awakened.</p></div>
+    <div class="frame-copy phrase-copy" id="phrase-copy" aria-hidden="true"><span class="kicker">01 / THE WAKE PHRASE</span><p class="pre-title">just say</p><h2>hala<br><em>waleef.</em></h2><div class="waveform" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
+    <div class="frame-copy meet-copy" id="meet-copy" aria-hidden="true"><span class="kicker">02 / AWAKENING</span><h2>meet<br><em>waleef.</em></h2></div>
+    <div class="frame-copy physical-copy" id="physical-copy" aria-hidden="true"><span class="kicker">03 / A NEW PERSPECTIVE</span><h2>physical<br><em>presence.</em></h2></div>
+    <div class="frame-copy finale-copy" id="finale-copy" aria-hidden="true"><span class="kicker">04 / INTRODUCING WALEEF</span><h2>Waleef.</h2><p>Conversational AI and remote human presence in the vehicle.</p></div>
+    <div class="bottom"><span id="scene-number">01 / 06</span><div class="bottom-right"><span>SCROLL TO EXPLORE</span><span class="track"><i id="track-progress"></i></span><span class="arrow" aria-hidden="true"><svg class="fa-icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc. --><path d="M169.4 470.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 370.8 224 64c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 306.7L54.6 265.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"/></svg></span></div></div>
+    <nav class="dots" aria-label="Jump to a hero scene"><button data-step="0" aria-label="Opening silhouette" class="current"></button><button data-step="1" aria-label="Something is sleeping"></button><button data-step="2" aria-label="Hala Waleef"></button><button data-step="3" aria-label="Meet Waleef"></button><button data-step="4" aria-label="Physical presence"></button><button data-step="5" aria-label="Waleef full reveal"></button></nav>
+  </div>
+</section>
+<section class="story" id="introduction" aria-labelledby="story-title">
+  <div class="story-sticky">
+    <div class="story-top">
+      <div class="story-eyebrow"><span class="eyebrow-line"></span> INTRODUCTION</div>
+      <div class="story-heading-row">
+        <div><h2 id="story-title">AI meets <span>human presence.</span></h2>
+        <p class="story-deck">Three prototype generations evaluated in laboratories, simulations and real vehicles advance a new platform for passenger interaction and assistance.</p></div>
+        <div class="story-index" aria-hidden="true"><span id="story-current">01</span><i></i>03</div>
+      </div>
+    </div>
+    <div class="story-window" id="story-window">
+      <div class="story-rail" id="story-rail">
+        <article class="story-panel panel-platform" aria-labelledby="panel-platform-title">
+          <div class="story-panel-copy"><span class="panel-eyebrow">01 / THREE PROTOTYPE GENERATIONS</span>
+          <h3 id="panel-platform-title">Three prototype<br>generations.</h3>
+          <p>Evaluated in laboratories, simulations and real vehicles.</p>
+          </div>
+          <div class="panel-product product-platform"><img src="assets/angle.png" alt="Waleef robotic arm in three-quarter view" loading="lazy"></div>
+        </article>
+        <article class="story-panel panel-companion" aria-labelledby="panel-companion-title">
+          <div class="story-panel-copy"><span class="panel-eyebrow">02 / AI-POWERED ROBOTIC COMPANION</span>
+          <h3 id="panel-companion-title">AI-powered robotic<br>companion.</h3>
+          <p>Passengers can interact directly with an AI-powered robotic companion.</p>
+          </div>
+          <div class="panel-product product-companion"><div class="voice-field" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><img src="assets/front.png" alt="Front view of Waleef's dual-lens camera and gripper" loading="lazy"></div>
+        </article>
+        <article class="story-panel panel-remote" aria-labelledby="panel-remote-title">
+          <div class="story-panel-copy"><span class="panel-eyebrow">03 / REMOTE HUMAN INTERACTION</span>
+          <h3 id="panel-remote-title">Remote human<br>interaction.</h3>
+          <p>Passengers can connect with a person outside the vehicle through the robot.</p>
+          </div>
+          <div class="panel-product product-remote">
+            <div class="connection-graphic" aria-hidden="true"><div class="connection-line"></div><div class="remote-node"><svg class="fa-icon " aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc. --><path d="M256 48C141.1 48 48 141.1 48 256l0 40c0 13.3-10.7 24-24 24s-24-10.7-24-24l0-40C0 114.6 114.6 0 256 0S512 114.6 512 256l0 144.1c0 48.6-39.4 88-88.1 88L313.6 488c-8.3 14.3-23.8 24-41.6 24l-32 0c-26.5 0-48-21.5-48-48s21.5-48 48-48l32 0c17.8 0 33.3 9.7 41.6 24l110.4 .1c22.1 0 40-17.9 40-40L464 256c0-114.9-93.1-208-208-208zM144 208l16 0c17.7 0 32 14.3 32 32l0 112c0 17.7-14.3 32-32 32l-16 0c-35.3 0-64-28.7-64-64l0-48c0-35.3 28.7-64 64-64zm224 0c35.3 0 64 28.7 64 64l0 48c0 35.3-28.7 64-64 64l-16 0c-17.7 0-32-14.3-32-32l0-112c0-17.7 14.3-32 32-32l16 0z"/></svg></div></div>
+            <img src="assets/side.png" alt="Waleef robotic arm viewed from the side, with QMIC branding" loading="lazy">
+          </div>
+        </article>
+      </div>
+    </div>
+    <div class="story-bottom"><div class="story-controls"><button id="story-back" type="button" aria-label="Previous scene"><svg class="fa-icon " aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc. --><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></button><button id="story-next" type="button" aria-label="Next scene"><svg class="fa-icon " aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc. --><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg></button></div><div class="story-progress" aria-hidden="true"><span id="story-progress-fill"></span></div><div class="story-hint">SCROLL TO EXPLORE <span aria-hidden="true"><svg class="fa-icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc. --><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg></span></div></div>
+  </div>
+</section>
+
+<!-- Section 03: AI Companion / approved copy, real Waleef imagery -->
+<section class="companion" id="ai-companion" aria-labelledby="companion-title">
+  <div class="companion-sticky">
+    <div class="companion-ambient" aria-hidden="true"></div>
+    <div class="companion-heading">
+      <span class="companion-kicker">03 / AI COMPANION</span>
+      <h2 id="companion-title">An AI companion<br>with a <em>physical presence.</em></h2>
+    </div>
+    <div class="companion-body">
+      <div class="companion-copy">
+        <div class="companion-beat" data-beat="0">
+          <span class="companion-small">01 / CONVERSATION</span>
+          <h3>Natural, context-aware conversation</h3>
+          <p>Waleef combines natural, context-aware conversation with a physical robotic presence inside the vehicle.</p>
+        </div>
+        <div class="companion-beat" data-beat="1">
+          <span class="companion-small">02 / ENGAGEMENT</span>
+          <h3>Responses to requests and proactive engagement</h3>
+          <p>Its conversational AI supports dialogue with occupants, while its interaction design encompasses both responses to requests and proactive engagement.</p>
+        </div>
+        <div class="companion-beat" data-beat="2">
+          <span class="companion-small">03 / POTENTIAL APPLICATIONS</span>
+          <h3>Companionship, entertainment and assistance</h3>
+          <p>This approach allows developers to explore passenger experiences that extend beyond a voice interface. Companionship, entertainment and assistance are potential applications, with further development focused on refining how the robot interacts with occupants within the constraints of a vehicle cabin.</p>
+        </div>
+      </div>
+      <div class="companion-art" aria-label="Photographs of the real Waleef robot">
+        <div class="companion-aura" aria-hidden="true"></div>
+        <img class="companion-front" src="assets/front.png" loading="lazy" alt="Front view of Waleef's dual-lens camera and gripper">
+        <img class="companion-angle" src="assets/angle.png" loading="lazy" alt="Waleef robotic arm in an angled view">
+        <div class="companion-wave" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        <div class="companion-terms" aria-hidden="true"><span>Companionship</span><span>Entertainment</span><span>Assistance</span></div>
+      </div>
+    </div>
+    <div class="companion-bottom" aria-hidden="true"><span id="companion-count">01 / 03</span><div class="companion-progress"><i id="companion-progress-fill"></i></div><span>SCROLL TO EXPLORE</span></div>
+  </div>
+</section>
+
+<!-- Section 04: Remote Human Interaction — source: Waleef_Website_Article.docx -->
+<section class="remote" id="remote-presence" aria-labelledby="remote-title">
+ <div class="remote-sticky">
+  <div class="remote-glow" aria-hidden="true"></div>
+  <div class="remote-heading">
+   <span class="remote-eyebrow">04 / REMOTE HUMAN INTERACTION</span>
+   <h2 id="remote-title">Remote human interaction<br><em>through the robot.</em></h2>
+  </div>
+  <div class="remote-layout">
+   <div class="remote-narrative">
+    <div class="remote-beat" data-remote-beat="0">
+     <span class="remote-step">01 / REMOTE PRESENCE</span>
+     <h3>Remote human interaction</h3>
+     <p>Waleef also supports teleoperation and telexistence, enabling someone outside the vehicle to interact through the robot.</p>
+    </div>
+    <div class="remote-beat" data-remote-beat="1">
+     <span class="remote-step">02 / TELEOPERATION</span>
+     <h3>Teleoperation</h3>
+     <p>Teleoperation allows a remote person to control the robot and communicate with occupants.</p>
+    </div>
+    <div class="remote-beat" data-remote-beat="2">
+     <span class="remote-step">03 / TELEXISTENCE</span>
+     <h3>Telexistence</h3>
+     <p>Telexistence enables that person to experience and interact with the distant environment through the robot’s supported sensing and movement capabilities.</p>
+    </div>
+    <div class="remote-beat remote-beat-outcome" data-remote-beat="3">
+     <span class="remote-step">04 / SERVICE PARTNERS</span>
+     <p>For prospective service partners, these capabilities provide a basis for exploring remote passenger assistance and communication. Bringing AI interaction and remote human presence into one platform offers flexibility to investigate different service models and passenger needs.</p>
+    </div>
+   </div>
+   <div class="remote-diagram" aria-label="Concept illustration of a remote person connecting to Waleef">
+    <div class="remote-person" aria-hidden="true">
+     <div class="remote-person-top">REMOTE PERSON</div>
+     <div class="remote-person-icon"><svg class="fa-icon " aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc. --><path d="M256 48C141.1 48 48 141.1 48 256l0 40c0 13.3-10.7 24-24 24s-24-10.7-24-24l0-40C0 114.6 114.6 0 256 0S512 114.6 512 256l0 144.1c0 48.6-39.4 88-88.1 88L313.6 488c-8.3 14.3-23.8 24-41.6 24l-32 0c-26.5 0-48-21.5-48-48s21.5-48 48-48l32 0c17.8 0 33.3 9.7 41.6 24l110.4 .1c22.1 0 40-17.9 40-40L464 256c0-114.9-93.1-208-208-208zM144 208l16 0c17.7 0 32 14.3 32 32l0 112c0 17.7-14.3 32-32 32l-16 0c-35.3 0-64-28.7-64-64l0-48c0-35.3 28.7-64 64-64zm224 0c35.3 0 64 28.7 64 64l0 48c0 35.3-28.7 64-64 64l-16 0c-17.7 0-32-14.3-32-32l0-112c0-17.7 14.3-32 32-32l16 0z"/></svg></div>
+     <div class="remote-person-footer">CONCEPT VISUAL</div>
+    </div>
+    <div class="remote-link" aria-hidden="true">
+      <span class="remote-link-core"></span><div class="remote-pulse"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+    </div>
+    <div class="remote-machine" aria-hidden="true"><img src="assets/front.png" alt=""></div>
+    <div class="remote-mode-note" aria-hidden="true"><span class="remote-note-tele">CONTROL &amp; COMMUNICATION</span><span class="remote-note-teleex">SENSING &amp; MOVEMENT</span></div>
+   </div>
+  </div>
+  <div class="remote-footer"><span id="remote-counter">01 / 04</span><span class="remote-progress"><i id="remote-progress-fill"></i></span><span>SCROLL TO EXPLORE</span></div>
+ </div>
+</section>
+
+
+<!-- Section 05 / Approved article: Adaptable robotics for different vehicle environments -->
+<section class="engineering" id="adaptable-robotics" aria-labelledby="engineering-title">
+  <div class="engineering-sticky">
+    <div class="engineering-ambient" aria-hidden="true"></div>
+    <div class="engineering-header">
+      <span class="engineering-eyebrow">05 / ADAPTABLE ROBOTICS</span>
+      <h2 id="engineering-title">Adaptable robotics<br><em>for different vehicle environments.</em></h2>
+    </div>
+    <div class="engineering-layout">
+      <div class="engineering-text">
+        <div class="engineering-beat" data-engineering-beat="0">
+          <span class="engineering-index">01 / PHYSICAL DESIGN</span>
+          <h3>A soft, compliant robotic structure</h3>
+          <p>A soft, compliant robotic structure and adaptable configuration underpin Waleef’s physical design.</p>
+        </div>
+        <div class="engineering-beat" data-engineering-beat="1">
+          <span class="engineering-index">02 / CONFIGURATIONS</span>
+          <h3>Single-robot and multiple-robot arrangements</h3>
+          <p>Development explores single-robot and multiple-robot arrangements, alongside interchangeable end effectors that can support different physical interaction functions.</p>
+        </div>
+        <div class="engineering-beat" data-engineering-beat="2">
+          <span class="engineering-index">03 / RECONFIGURABLE SYSTEM</span>
+          <h3>Different vehicle layouts and interaction requirements</h3>
+          <p>Together, these features create scope to adapt the platform to different vehicle layouts and interaction requirements. Its distinguishing proposition is the combination of conversational AI, embodied interaction and remote presence within a reconfigurable in-vehicle system.</p>
+        </div>
+      </div>
+      <div class="engineering-visual" aria-label="Real Waleef hardware: articulated arm and gripper details">
+        <div class="engineering-circle" aria-hidden="true"></div>
+        <div class="engineering-line engineering-line-a" aria-hidden="true"></div>
+        <div class="engineering-line engineering-line-b" aria-hidden="true"></div>
+        <div class="engineering-visual-layer engineering-full" aria-hidden="true"><img src="assets/side.png" alt="" loading="lazy"></div>
+        <div class="engineering-visual-layer engineering-joint" aria-hidden="true"><img src="assets/side.png" alt="" loading="lazy"></div>
+        <div class="engineering-visual-layer engineering-angle" aria-hidden="true"><img src="assets/angle.png" alt="" loading="lazy"></div>
+        <div class="engineering-label" aria-hidden="true"><i></i><span id="engineering-detail">ARM STRUCTURE</span></div>
+        
+      </div>
+      <div class="engineering-mobile-detail" aria-label="Close-up of Waleef articulated arm mechanism"><img src="assets/side.png" loading="lazy" alt="Close-up of Waleef’s arm mechanisms and joints"></div>
+    </div>
+    <div class="engineering-footer" aria-hidden="true"><span id="engineering-count">01 / 03</span><span class="engineering-progress"><i id="engineering-progress-fill"></i></span><span>SCROLL TO EXPLORE</span></div>
+  </div>
+</section>
+
+</main>
+
+<footer class="waleef-site-footer" id="contact" aria-labelledby="waleef-footer-heading">
+  <div class="waleef-footer-main">
+    <div>
+      <span class="waleef-footer-kicker">WALEEF / QMIC</span>
+      <h2 id="waleef-footer-heading">Explore Waleef<br>with QMIC</h2>
+    </div>
+    <div class="waleef-footer-copy">
+      <p>Mobility providers, technology developers and research partners interested in passenger interaction and robotic assistance can contact QMIC to explore Waleef’s capabilities, arrange a demonstration or discuss potential development opportunities.</p>
+      <a class="waleef-footer-email" href="mailto:business@qmic.com" aria-label="Email QMIC at business@qmic.com"><span>business@qmic.com</span><svg class="fa-icon " aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc. --><path d="M320 0c-17.7 0-32 14.3-32 32s14.3 32 32 32l82.7 0L201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L448 109.3l0 82.7c0 17.7 14.3 32 32 32s32-14.3 32-32l0-160c0-17.7-14.3-32-32-32L320 0zM80 32C35.8 32 0 67.8 0 112L0 432c0 44.2 35.8 80 80 80l320 0c44.2 0 80-35.8 80-80l0-112c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 112c0 8.8-7.2 16-16 16L80 448c-8.8 0-16-7.2-16-16l0-320c0-8.8 7.2-16 16-16l112 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L80 32z"/></svg></a>
+    </div>
+  </div>
+  <div class="waleef-footer-bottom"><a href="#home" aria-label="Back to Waleef introduction"><img src="assets/waleef.svg" alt="Waleef"></a><a href="#home">Back to top <svg class="fa-icon " aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc. --><path d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2 160 448c0 17.7 14.3 32 32 32s32-14.3 32-32l0-306.7L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z"/></svg></a></div>
+</footer>
+
+<script src="script.js"></script></body></html>
