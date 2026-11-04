@@ -8,30 +8,30 @@ const smooth=(a,b,p)=>{const t=clamp((p-a)/(b-a));return t*t*(3-2*t)};
 // Each caption has its own non-overlapping display window. All other visual transitions are continuous.
 const windowAlpha=(enterStart,enterEnd,exitStart,exitEnd,p)=>smooth(enterStart,enterEnd,p)*(1-smooth(exitStart,exitEnd,p));
 const lerp=(a,b,t)=>a+(b-a)*t;
-const v=(el,alpha,scale=1,x=0,y=0,brightness=1,blur=0)=>{el.style.opacity=alpha.toFixed(4);el.style.transform=`translate3d(${x.toFixed(3)}%,${y.toFixed(3)}%,0) scale(${scale.toFixed(4)})`;el.style.filter=`brightness(${brightness.toFixed(3)}) blur(${blur.toFixed(2)}px)`};
-const text=(el,alpha,offset=0)=>{el.style.opacity=alpha.toFixed(4);el.style.transform=`translate3d(0,calc(-40% + ${offset.toFixed(1)}px),0)`};
+const v=(el,alpha,scale=1,x=0,y=0,brightness=1,blur=0)=>{const onPhone=matchMedia('(max-width:850px)').matches;const mobileLight=onPhone?(el===els.sleep?Math.max(.45,brightness):Math.max(.97,brightness)):brightness;el.style.opacity=alpha.toFixed(4);el.style.transform=`translate3d(${x.toFixed(3)}%,${y.toFixed(3)}%,0) scale(${scale.toFixed(4)})`;el.style.filter=`brightness(${mobileLight.toFixed(3)}) blur(${onPhone?0:blur.toFixed(2)}px)`};
+const text=(el,alpha,offset=0)=>{el.style.opacity=alpha.toFixed(4);el.style.transform=matchMedia('(max-width:850px)').matches?`translate3d(0,${offset.toFixed(1)}px,0)`:`translate3d(0,calc(-40% + ${offset.toFixed(1)}px),0)`};
 const ranges=[0,.12,.30,.48,.67,.865,1];const anchors=[0,.11,.31,.52,.73,.94];
 let last=-1,raf=0;
 function paint(){raf=0;const rect=track.getBoundingClientRect();const distance=Math.max(1,track.offsetHeight-innerHeight);const p=clamp(-rect.top/distance);if(Math.abs(p-last)<.00004)return;last=p;
 // V13: exactly the dark V5 starting composition. Start deeper in shadow and outside frame,
 // then make a continuous slow inward drift throughout standby and the wake phrase.
-const inward=smooth(0,.38,p);
+const inward=smooth(0,.33,p);
 const v5out=1-smooth(.34,.57,p);
 v(els.sleep,v5out,
   lerp(1.00,.91,inward),
   lerp(0,-9,inward),
   lerp(2,-1,inward),
-  lerp(.15,.70,smooth(.05,.35,p)),3*windowAlpha(.38,.45,.52,.59,p));
+  lerp(matchMedia('(max-width: 850px)').matches ? .36 : .15,.82,smooth(.05,.35,p)),2.1*windowAlpha(.38,.45,.52,.59,p));
 // A secondary veil holds the original sleep scene almost black; only dissolve it
 // after the word 'sleeping' appears and the wake phrase starts.
-els.veil.style.opacity=(.73*(1-smooth(.08,.35,p))).toFixed(4);
+els.veil.style.opacity=((matchMedia('(max-width: 850px)').matches ? .32 : .73)*(1-smooth(.07,.30,p))).toFixed(4);
 // Keep the robot spatially grounded between camera angles. Each replacement shot
 // emerges over a LONG overlapping interval, with matched pull-back and soft focus.
 const frontIn=smooth(.33,.51,p);
 const frontOut=1-smooth(.57,.73,p);
 const fAlpha=frontIn*frontOut;
 v(els.front,fAlpha,
-  lerp(1.47,.98,smooth(.33,.68,p)),
+  lerp(matchMedia('(max-width: 850px)').matches?1.08:1.47,.98,smooth(.33,.68,p)),
   lerp(7,-4,smooth(.33,.68,p)),
   lerp(1,-2,smooth(.33,.68,p)),
   lerp(.36,1.06,smooth(.34,.57,p)),3*windowAlpha(.34,.39,.59,.68,p));
@@ -39,13 +39,13 @@ const angleIn=smooth(.63,.79,p);
 const angleOut=1-smooth(.80,.94,p);
 const aAlpha=angleIn*angleOut;
 v(els.angle,aAlpha,
-  lerp(1.28,.99,smooth(.63,.88,p)),
+  lerp(matchMedia('(max-width: 850px)').matches?1.05:1.28,.99,smooth(.63,.88,p)),
   lerp(8,-3,smooth(.63,.88,p)),
   lerp(-1,0,smooth(.63,.88,p)),
   lerp(.58,1.08,smooth(.63,.83,p)),3*windowAlpha(.63,.67,.81,.90,p));
 const sAlpha=smooth(.865,.995,p);
 v(els.side,sAlpha,
-  lerp(1.13,.97,smooth(.86,1,p)),
+  lerp(matchMedia('(max-width: 850px)').matches?1.03:1.13,.97,smooth(.86,1,p)),
   lerp(9,-1,smooth(.87,1,p)),0,
   lerp(.62,1.04,smooth(.87,1,p)),2.7*windowAlpha(.865,.90,.955,1,p));
 // Controlled broad light bridge at angle changes: dissolve through a continuous
@@ -187,6 +187,6 @@ addEventListener('scroll',schedule,{passive:true});addEventListener('resize',sch
  if(!header||!menu||!nav)return;
  menu.addEventListener('click',()=>{const opened=nav.classList.toggle('is-open');menu.setAttribute('aria-expanded',String(opened));menu.setAttribute('aria-label',opened?'Close navigation':'Open navigation');});
  nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('is-open');menu.setAttribute('aria-expanded','false');}));
- const updateHeader=()=>{const y=window.scrollY+36;const story=document.querySelector('#introduction');header.classList.toggle('on-light',!!story&&y>=story.offsetTop&&y<story.offsetTop+story.offsetHeight-70)};
+ const updateHeader=()=>{const y=window.scrollY+36;const lightSections=['#introduction','#remote-presence','#contact'];const isLight=lightSections.some(sel=>{const el=document.querySelector(sel);return !!el&&y>=el.offsetTop&&y<el.offsetTop+el.offsetHeight-50});header.classList.toggle('on-light',isLight)};
  window.addEventListener('scroll',updateHeader,{passive:true});window.addEventListener('resize',updateHeader,{passive:true});updateHeader();
 })();
