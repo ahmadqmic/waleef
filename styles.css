@@ -364,3 +364,112 @@ h1,h2,h3{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;letter-spacing:
   .story-panel-copy{align-self:flex-start!important;margin-top:0}
   .story-panel .panel-product{pointer-events:none}
 }
+
+/* V23 responsive audit: alternating editorial contrast and legible mobile product framing. */
+:root {--waleef-primary:#E41D26}
+/* 01 dark / 02 light / 03 dark / 04 light / 05 dark / 06 light */
+.remote{background:#F6F7F7;color:#1E292D}
+.remote-glow{background:radial-gradient(ellipse 44% 65% at 79% 52%,rgba(228,29,38,.07),transparent 76%),linear-gradient(115deg,#FAFBFB,#F0F2F2)}
+.remote-heading h2{color:#20292B}
+.remote-heading h2 em{color:#C9252E}
+.remote-eyebrow,.remote-step,.remote-context-label{color:#BA2029}
+.remote-beat h3{color:#1C2528}
+.remote-beat p,.remote-beat-outcome p{color:#465459}
+.remote-beat-outcome{max-width:650px}
+.remote-person{background:#FFF;border:1px solid #D8DDE0;box-shadow:0 17px 38px #26353E14}
+.remote-person-top,.remote-person-footer{color:#5B686C}
+.remote-person-icon{background:#E9EDF0;color:#303B41}
+.remote-person-icon .fa-icon{color:#303B41;fill:currentColor}
+.remote-link{background:linear-gradient(90deg,#C52B36,#E41D26);box-shadow:none}
+.remote-link-core{background:#E41D26;box-shadow:none}
+.remote-pulse i{background:#BD2731;box-shadow:none}
+.remote-machine img{filter:drop-shadow(0 28px 25px #16252D27)}
+.remote-mode-note{color:#AD3139}
+.remote-footer{color:#647074}.remote-footer>span:first-child{color:#B4212B}
+.remote-progress{background:#CED5D8}.remote-progress i{background:#E41D26}
+.remote-beat-outcome{border-color:#D9DDDF}
+.waleef-site-footer{background:#F5F6F6;color:#1B272B;border-top:1px solid #E0E4E6}
+.waleef-footer-kicker{color:#BD232D}
+.waleef-footer-copy p{color:#526168}
+.waleef-footer-bottom{border-color:#D6DCDE}
+.waleef-footer-bottom a{color:#405157}
+.waleef-footer-bottom img{filter:none}
+/* A light footer with its own legible text logo; do not invert the real red wordmark. */
+.waleef-site-footer h2{color:#1B272B}
+@media(max-width:850px){
+  /* Spread six story beats across more finger-scroll distance without accelerating the artwork. */
+  .hero-track{height:690svh}
+  .hero-stage{background:#050A0E}
+  .ambient{background:radial-gradient(ellipse 78% 60% at 64% 39%,#2D343B 0%,#11191E 56%,#050A0E 93%)}
+  .robot-v5 img{width:clamp(340px,115vw,720px);right:-11vw;top:43%;transform:translateY(-46%)}
+  .robot-front img{width:min(112vw,650px);max-height:53svh}
+  .robot-angle img{width:min(126vw,760px);max-height:56svh}
+  .robot-side img{width:min(140vw,760px);max-height:49svh}
+  .shade{background:linear-gradient(180deg,#07101440 0%,transparent 25%,transparent 50%,#050A0ECC 81%,#050A0EEB)}
+  .frame-copy,.phrase-copy,.meet-copy,.physical-copy,.finale-copy{left:clamp(22px,5vw,44px);right:20px;max-width:calc(100vw - 42px);top:auto;bottom:clamp(72px,13svh,120px);transform:translate3d(0,0,0)}
+  .frame-copy h1,.frame-copy h2{font-size:clamp(46px,10vw,76px);line-height:.98;letter-spacing:-.065em}
+  .phrase-copy h2{font-size:clamp(62px,15vw,105px)}
+  .meet-copy h2,.finale-copy h2{font-size:clamp(58px,13vw,98px)}
+  .physical-copy h2{font-size:clamp(47px,11vw,85px)}
+  .frame-copy p{font-size:15px;line-height:1.45;margin:11px 0 0}
+  .frame-copy .kicker{font-size:10px;margin-bottom:12px}
+  .phrase-copy .pre-title{font-size:18px}
+  .waveform{height:26px;margin-top:6px}
+  .dormant-veil{background:linear-gradient(180deg,#04090B33,transparent 40%,#04090B77 96%)}
+  .bottom{bottom:17px}
+  .dots{right:14px;top:35%}
+  .remote{height:auto}
+  .remote-sticky{background:#F6F7F7}
+  .remote-beat-outcome{border-top:1px solid #D9DDDF}
+  .remote-diagram{background:#EEF1F2;border:1px solid #DFE5E7;border-radius:22px;padding:8px}
+  .remote-person{min-width:90px}
+}
+@media(max-width:520px){
+ .hero-track{height:730svh}
+ .robot-v5 img{width:122vw;right:-15vw;top:40%}
+ .robot-front img{width:108vw;max-height:49svh}
+ .robot-angle img{width:118vw;max-height:52svh}
+ .robot-side img{width:130vw;max-height:44svh}
+ .frame-copy,.phrase-copy,.meet-copy,.physical-copy,.finale-copy{bottom:clamp(72px,12svh,100px)}
+ .frame-copy h1{font-size:clamp(48px,11vw,65px)}
+ .phrase-copy h2{font-size:clamp(62px,16vw,88px)}
+ .meet-copy h2{font-size:clamp(56px,12vw,74px)}
+ .physical-copy h2{font-size:clamp(48px,10.5vw,66px)}
+ .finale-copy h2{font-size:clamp(61px,13vw,76px)}
+ .robot-front,.robot-angle,.robot-side{align-items:flex-start;padding-top:12svh}
+ .remote-person-icon{height:120px}
+}
+@media(prefers-reduced-motion:reduce){
+ .hero-track{height:100svh}
+ .hero-stage{position:relative}
+}
+
+/* V23 final mobile framing: show the physical product in focus; avoid cropped grippers. */
+@media(max-width:520px){
+ .robot-v5 img{width:108vw;right:-6vw;top:40%}
+ .robot-front img{width:96vw;max-height:48svh}
+ .robot-angle img{width:108vw;max-height:49svh}
+ .robot-side img{width:100vw;max-height:46svh}
+}
+
+/* V24 — mobile hero: one common, vertically balanced robot visual area.
+   Text stays in the lower reading zone; product art is centered above it.
+   This is intentionally mobile-only and does not alter any scroll timings. */
+@media (max-width:850px){
+  .hero-stage{--hero-head-h:64px;--hero-copy-zone:clamp(212px,32svh,285px)}
+  .robot-front,.robot-angle,.robot-side{
+    align-items:center!important;
+    justify-content:center!important;
+    padding:var(--hero-head-h) 0 var(--hero-copy-zone)!important;
+    box-sizing:border-box;
+  }
+  .robot-front img,.robot-angle img,.robot-side img{height:auto;object-fit:contain}
+  .robot-v5 img{top:calc(50% - (var(--hero-copy-zone) - var(--hero-head-h))/2);transform:translateY(-46%)}
+  .frame-copy,.phrase-copy,.meet-copy,.physical-copy,.finale-copy{
+    bottom:clamp(70px,11svh,105px);
+  }
+}
+@media(max-width:520px){
+  .hero-stage{--hero-copy-zone:clamp(210px,33svh,275px)}
+  .robot-v5 img{top:calc(50% - (var(--hero-copy-zone) - var(--hero-head-h))/2)}
+}
